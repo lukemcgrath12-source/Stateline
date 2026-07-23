@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Feral Animal Control NSW | Stateline Contract Shooting</title>
+<meta name="description" content="Licensed fox, feral cat, wild dog, feral pig and feral deer control across NSW. Programs structured to your property by Sam Cox. Call 0477 014 447.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Stateline Contract Shooting","description":"Licensed feral animal control across NSW.","telephone":"0477014447","email":"Sam.cox51@gmail.com","areaServed":{"@type":"State","name":"New South Wales"},"founder":{"@type":"Person","name":"Sam Cox"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Fox Control"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Feral Cat Control"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Wild Dog Control"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Feral Pig Control"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Feral Deer Control"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --olive:#1F2A1E;--olive-deep:#151D13;--olive-light:#2A3826;--olive-accent:#4A5D3A;
+  --gold:#C8A86B;--gold-dark:#B8985B;
+  --stone:#F7F5EF;--stone-2:#F2F0E9;--border:#E5E2D8;--border-2:#D8D4C6;--white:#FFFFFF;
+  --text:#2B2B26;--text-light:#5C5C52;--text-faint:#8A8A7E;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
+  --display:'Oswald',sans-serif;
+  --body:'Poppins',-apple-system,sans-serif;
+  --ease:cubic-bezier(0.25,0.1,0.25,1);
+  --ease-sheet:cubic-bezier(0.32,0.72,0,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);line-height:1.6;background:var(--white);-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--olive)}
+img{display:block}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--olive);padding:10px 18px;font-size:13px;font-weight:600;z-index:10000;border-radius:0 0 8px 0}
+.skip-link:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-dark);outline-offset:3px}
+.wrap{max-width:1440px;margin:0 auto}
+.px{padding-left:20px;padding-right:20px}
+@media(min-width:640px){.px{padding-left:32px;padding-right:32px}}
+@media(min-width:1024px){.px{padding-left:48px;padding-right:48px}}
+
+/* ============ TEXT-ROLL BUTTON SYSTEM ============ */
+.pillbtn{display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;text-decoration:none;border-radius:999px;padding:8px 8px 8px 22px;font-family:var(--body);font-size:13px;font-weight:500;transition:background .5s var(--ease)}
+@media(min-width:640px){.pillbtn{font-size:14px;padding-left:24px}}
+.pillbtn .roll{display:block;overflow:hidden;height:20px}
+.pillbtn .roll i{display:flex;flex-direction:column;font-style:normal;transition:transform .5s var(--ease)}
+.pillbtn .roll b{height:20px;display:flex;align-items:center;font-weight:500;white-space:nowrap}
+.pillbtn:hover .roll i{transform:translateY(-50%)}
+.pillbtn .circ{width:28px;height:28px;border-radius:999px;background:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .5s var(--ease)}
+@media(min-width:640px){.pillbtn .circ{width:32px;height:32px}}
+.pillbtn:hover .circ{transform:rotate(-45deg)}
+.pillbtn-gold{background:var(--gold);color:var(--white)}
+.pillbtn-gold:hover{background:var(--gold-dark)}
+.pillbtn-gold .circ svg{stroke:var(--gold)}
+.pillbtn-dark{background:var(--olive);color:var(--white)}
+.pillbtn-dark:hover{background:var(--olive-deep)}
+.pillbtn-dark .circ{width:24px;height:24px}
+.pillbtn-dark .circ svg{stroke:var(--olive)}
+
+/* ============ NAVBAR ============ */
+.navwrap{position:fixed;top:0;left:0;right:0;z-index:100;padding:8px}
+@media(min-width:640px){.navwrap{padding:12px}}
+.navbar{max-width:1416px;margin:0 auto;background:var(--white);border-radius:999px;padding:5px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;box-shadow:0 1px 6px rgba(31,42,30,.06)}
+.navwrap.scrolled .navbar{box-shadow:0 4px 24px rgba(31,42,30,.12)}
+.nav-left{display:flex;align-items:center;gap:24px}
+.nav-logochip{background:var(--olive);border-radius:999px;padding:9px 18px;display:flex;align-items:center}
+.nav-logochip img{height:22px}
+.nav-links{display:none;align-items:center;gap:24px}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-links a{font-size:14px;color:var(--olive);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--text-faint)}
+.nav-links a.active{font-weight:600}
+.nav-right{display:none;align-items:center;gap:16px;padding-right:2px}
+@media(min-width:768px){.nav-right{display:flex}}
+.nav-note{display:none;font-size:13px;color:var(--text-light)}
+@media(min-width:1024px){.nav-note{display:block}}
+.nav-time{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;color:var(--text-light)}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;background:var(--olive);color:var(--white);border:none;border-radius:999px;padding:10px 16px;font-family:var(--body);font-size:13px;font-weight:500;cursor:pointer}
+@media(min-width:768px){.menu-btn{display:none}}
+
+/* ============ MOBILE SHEET ============ */
+.sheet-layer{position:fixed;inset:0;z-index:200;pointer-events:none}
+.sheet-layer.open{pointer-events:auto}
+.sheet-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.6);opacity:0;transition:opacity .5s}
+.sheet-layer.open .sheet-backdrop{opacity:1}
+.sheet{position:absolute;bottom:0;left:12px;right:12px;margin-bottom:12px;background:var(--white);border-radius:20px;padding:24px;transform:translateY(110%);transition:transform .5s var(--ease-sheet)}
+.sheet-layer.open .sheet{transform:translateY(0)}
+.sheet-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.sheet-time{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;color:var(--text-light);border:1px solid var(--border);border-radius:999px;padding:7px 14px}
+.sheet-links{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.sheet-links a{font-size:28px;line-height:32px;font-weight:500;color:var(--olive);text-decoration:none;letter-spacing:-.02em}
+.sheet .pillbtn{width:100%;justify-content:space-between}
+
+/* ============ PAGE HERO ============ */
+.phero{position:relative;background:var(--stone);padding-top:150px;padding-bottom:56px;overflow:hidden}
+@media(min-width:1024px){.phero{padding-top:190px;padding-bottom:72px}}
+.phero-contours{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.phero-grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.phero-inner{position:relative}
+.phero-label{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.phero-label::before{content:'';width:30px;height:1px;background:var(--gold-dark)}
+.phero h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:500;line-height:1.06;letter-spacing:-.03em;color:var(--olive);margin-bottom:20px}
+.phero-sub{font-size:15px;color:var(--text-light);max-width:560px;line-height:1.85;margin-bottom:32px}
+@media(min-width:640px){.phero-sub{font-size:16px}}
+.phero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-outline{display:inline-flex;align-items:center;background:transparent;color:var(--olive);padding:12px 26px;border:1px solid var(--border-2);border-radius:999px;font-size:13px;font-weight:500;text-decoration:none;transition:border-color .25s,background .25s}
+.btn-outline:hover{border-color:var(--gold-dark);background:rgba(200,168,107,.07)}
+
+/* ============ SPECIES JUMP STRIP ============ */
+.jump{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);position:relative;z-index:5}
+.jump-inner{display:flex;gap:8px;overflow-x:auto;padding-top:14px;padding-bottom:14px;scrollbar-width:none}
+.jump-inner::-webkit-scrollbar{display:none}
+.jump a{flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--olive);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:9px 18px;transition:border-color .25s,background .25s}
+.jump a:hover{border-color:var(--gold);background:var(--stone)}
+.jump a b{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.12em;color:var(--gold-dark)}
+
+/* ============ SERVICE BLOCKS ============ */
+.svc-sec{padding-top:64px;padding-bottom:64px}
+@media(min-width:1024px){.svc-sec{padding-top:96px;padding-bottom:96px}}
+.svc-sec:nth-of-type(even){background:var(--stone-2)}
+.svc{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;scroll-margin-top:110px}
+@media(min-width:1024px){.svc{grid-template-columns:44% 1fr;gap:clamp(40px,5vw,80px)}}
+@media(min-width:1024px){.svc.flip .svc-panel{order:2}}
+.svc-panel{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--olive-deep)}
+.svc-panel>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.svc:hover .svc-panel>img{transform:scale(1.04)}
+.svc-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,29,19,.5) 0%,rgba(21,29,19,.06) 42%,rgba(21,29,19,.68) 100%)}
+.svc-contours{position:absolute;inset:0;opacity:.45}
+.svc-panel-inner{position:absolute;inset:0;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-start}
+.svc-code{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.4);text-transform:uppercase}
+.svc-sci{font-family:var(--mono);font-style:italic;font-size:11px;color:var(--gold)}
+.svc-big{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);font-weight:600;text-transform:uppercase;line-height:1.02;color:var(--white)}
+.svc-big em{font-style:normal;color:var(--gold)}
+.svc-copy .badge-row{margin-bottom:18px}
+.svc-copy h2{font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:500;letter-spacing:-.02em;line-height:1.15;color:var(--olive);margin-bottom:18px}
+.svc-copy p{font-size:14.5px;color:var(--text-light);line-height:1.85;margin-bottom:16px;max-width:600px}
+@media(min-width:640px){.svc-copy p{font-size:15px}}
+.svc-facts{border-top:1px solid var(--border);margin:26px 0 28px;max-width:600px}
+.svc-fact{display:flex;gap:18px;padding:12px 0;border-bottom:1px solid var(--border)}
+.svc-fact span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);width:96px;flex-shrink:0;padding-top:3px}
+.svc-fact b{font-size:13.5px;font-weight:500;color:var(--olive);line-height:1.55}
+.svc-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.badge-row{display:flex;align-items:center;gap:12px}
+.badge-num{width:24px;height:24px;border-radius:999px;background:var(--olive);color:var(--white);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-label{font-size:12px;font-weight:500;color:var(--olive);border:1px solid var(--border);border-radius:999px;padding:5px 14px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ EVERY PROGRAM ============ */
+.every-sec{background:var(--olive-deep);padding-top:72px;padding-bottom:80px;position:relative;overflow:hidden}
+@media(min-width:1024px){.every-sec{padding-top:104px;padding-bottom:112px}}
+.every-sec .svc-contours{opacity:.35}
+.every-inner{position:relative}
+.every-head{margin-bottom:44px}
+@media(min-width:1024px){.every-head{margin-bottom:64px}}
+.every-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.every-head h2{font-size:clamp(1.6rem,3.4vw,2.8rem);font-weight:500;letter-spacing:-.02em;line-height:1.1;color:var(--white);max-width:640px}
+.every-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.every-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.every-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.every{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px 22px;transition:border-color .3s,background .3s}
+.every:hover{border-color:rgba(200,168,107,.45);background:rgba(200,168,107,.04)}
+.every .e-num{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.2em;display:block;margin-bottom:16px}
+.every h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
+.every p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.75}
+
+/* ============ CTA BAND ============ */
+.cta-sec{background:var(--stone-2);padding:64px 20px 80px}
+@media(min-width:640px){.cta-sec{padding:80px 32px 96px}}
+.cta-band{max-width:1376px;margin:0 auto;background:var(--olive-deep);border-radius:28px;padding:clamp(64px,9vw,120px) 24px;text-align:center;position:relative;overflow:hidden}
+.cta-band .svc-contours{opacity:.4}
+.cta-inner{position:relative}
+.cta-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:20px}
+.cta-band h2{font-size:clamp(1.75rem,4.6vw,3.4rem);font-weight:500;letter-spacing:-.02em;color:var(--white);margin-bottom:16px;line-height:1.08}
+.cta-band>.cta-inner>p{font-size:15px;color:rgba(255,255,255,.55);margin:0 auto 40px;max-width:480px;line-height:1.85}
+.cta-number{font-family:var(--display);font-size:clamp(40px,7vw,84px);font-weight:600;color:var(--gold);display:inline-block;margin-bottom:8px;text-decoration:none;line-height:1;letter-spacing:.02em;transition:opacity .25s}
+.cta-number:hover{opacity:.82}
+.cta-label{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.22em;margin-bottom:40px;display:block}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-ghost{display:inline-flex;align-items:center;background:transparent;color:var(--white);padding:12px 28px;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-size:13px;font-weight:500;text-decoration:none;transition:border-color .25s,background .25s}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(200,168,107,.08)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
+@media(min-width:640px){footer{padding:88px 32px 0}}
+.footer-grid{max-width:1344px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:44px;padding-bottom:72px}
+@media(min-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:48px}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px}}
+.f-brand img{height:34px;margin-bottom:26px}
+.f-brand p{font-size:14.5px;color:rgba(255,255,255,.75);line-height:1.85;max-width:360px;margin-bottom:28px}
+.f-socials{display:flex;gap:12px}
+.f-socials a{width:46px;height:46px;border:1px solid rgba(255,255,255,.16);border-radius:12px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);text-decoration:none;transition:border-color .25s,color .25s,background .25s}
+.f-socials a:hover{border-color:var(--gold);color:var(--gold);background:rgba(200,168,107,.06)}
+.f-socials svg{width:20px;height:20px}
+.f-col h4{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.f-col ul{list-style:none}
+.f-col li{margin-bottom:18px}
+.f-col a{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px;transition:color .25s}
+.f-col a:hover{color:var(--gold)}
+.f-contact .f-phone{display:block;color:var(--white);font-size:16px;font-weight:500;text-decoration:none;transition:color .25s}
+.f-contact .f-phone:hover{color:var(--gold)}
+.f-contact .f-note{font-size:13px;color:rgba(255,255,255,.45);margin:6px 0 24px}
+.f-contact .f-email{display:block;color:rgba(255,255,255,.85);font-size:15px;text-decoration:none;margin-bottom:24px;transition:color .25s;word-break:break-all}
+.f-contact .f-email:hover{color:var(--gold)}
+.f-contact .f-area{font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:24px}
+.f-contact .f-abn{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.4)}
+.footer-bar{border-top:1px solid rgba(255,255,255,.09);padding:26px 20px;text-align:center;margin:0 -20px}
+@media(min-width:640px){.footer-bar{margin:0 -32px}}
+.footer-bar p{font-size:13px;color:rgba(255,255,255,.5)}
+.footer-bar .f-latitude{color:var(--gold)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="navwrap" id="navwrap">
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logochip" aria-label="Stateline home"><img src="data:image/png;base64,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" alt="Stateline Contract Shooting"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="nav-note">Taking bookings across NSW</span>
+      <span class="nav-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="clock">--:--</span>&nbsp;in NSW</span>
+      <a href="tel:0477014447" class="pillbtn pillbtn-dark">
+        <span class="roll"><i><b>Call 0477 014 447</b><b>Call 0477 014 447</b></i></span>
+        <span class="circ"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+    <button class="menu-btn" id="menuOpen" aria-label="Open menu">Menu <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  </nav>
+</div>
+
+<div class="sheet-layer" id="sheetLayer" aria-hidden="true">
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <div class="sheet" role="dialog" aria-label="Menu">
+    <div class="sheet-top">
+      <span class="sheet-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="clockMobile">--:--</span>&nbsp;in NSW</span>
+      <button class="menu-btn" id="menuClose" style="display:inline-flex" aria-label="Close menu">Close <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="sheet-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+      <span class="roll"><i><b>Call Sam &mdash; 0477 014 447</b><b>Call Sam &mdash; 0477 014 447</b></i></span>
+      <span class="circ"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="phero">
+  <svg class="phero-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 520" aria-hidden="true"><g fill="none" stroke="#D8D4C6" stroke-width="1" opacity=".7"><path d="M-100 420 C 240 350, 500 470, 800 390 S 1260 300, 1560 370"/><path d="M-100 460 C 260 390, 520 510, 820 430 S 1280 340, 1560 410"/><path d="M-100 90 C 240 40, 500 160, 800 80 S 1260 -10, 1560 60"/></g></svg>
+  <div class="phero-grain" aria-hidden="true"></div>
+  <div class="phero-inner wrap px">
+    <div class="phero-label">Services &middot; Stateline Contract Shooting</div>
+    <h1>Five species. Five programs.<br>One licensed operator.</h1>
+    <p class="phero-sub">Every program is structured around your property, your terrain, and the species you're dealing with &mdash; carried out personally by Sam Cox under the full set of NSW licences and accreditations.</p>
+    <div class="phero-cta">
+      <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+        <span class="roll"><i><b>Call Sam &mdash; 0477 014 447</b><b>Call Sam &mdash; 0477 014 447</b></i></span>
+        <span class="circ"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="contact.html" class="btn-outline">Send an Enquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JUMP STRIP ============ -->
+<div class="jump">
+  <div class="jump-inner wrap px" aria-label="Jump to a service">
+    <a href="#fox"><b>SP&mdash;01</b>Fox Control</a>
+    <a href="#feral-cat"><b>SP&mdash;02</b>Feral Cat Control</a>
+    <a href="#wild-dog"><b>SP&mdash;03</b>Wild Dog Control</a>
+    <a href="#feral-pig"><b>SP&mdash;04</b>Feral Pig Control</a>
+    <a href="#feral-deer"><b>SP&mdash;05</b>Feral Deer Control</a>
+  </div>
+</div>
+
+<!-- ============ SP-01 FOX ============ -->
+<section class="svc-sec">
+  <div class="svc wrap px" id="fox">
+    <div class="svc-panel reveal">
+      <img src="img/fox.jpg" alt="Red fox standing alert in open NSW grazing country at dawn" loading="lazy"><div class="svc-shade" aria-hidden="true"></div>
+      <div class="svc-panel-inner">
+        <div class="svc-top"><span class="svc-code">SP&mdash;01</span><span class="svc-sci">Vulpes vulpes</span></div>
+        <div class="svc-big">Fox<br><em>Control</em></div>
+      </div>
+    </div>
+    <div class="svc-copy reveal">
+      <div class="badge-row"><span class="badge-num">1</span><span class="badge-label">Fox Control</span></div>
+      <h2>The most widespread predator on NSW farming country.</h2>
+      <p>Foxes take lambs, poultry and native wildlife across nearly every property type in the state. Losses build quietly &mdash; a lamb here, a bird there &mdash; until lambing percentages and native populations tell the real story.</p>
+      <p>Stateline runs targeted fox programs structured around your property and your calendar, including timing programs around lambing when stock protection is the priority.</p>
+      <div class="svc-facts">
+        <div class="svc-fact"><span>Protects</span><b>Lambs, poultry, native wildlife</b></div>
+        <div class="svc-fact"><span>Pressure</span><b>Predation losses, den activity, night sightings</b></div>
+        <div class="svc-fact"><span>Programs</span><b>One-off, seasonal, or ongoing &mdash; structured to your property</b></div>
+      </div>
+      <div class="svc-cta">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Discuss fox control</b><b>Discuss fox control</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SP-02 FERAL CAT ============ -->
+<section class="svc-sec">
+  <div class="svc flip wrap px" id="feral-cat">
+    <div class="svc-panel reveal">
+      <img src="img/feral-cat.jpg" alt="Feral cat stalking through dry eucalypt bushland" loading="lazy"><div class="svc-shade" aria-hidden="true"></div>
+      <div class="svc-panel-inner">
+        <div class="svc-top"><span class="svc-code">SP&mdash;02</span><span class="svc-sci">Felis catus</span></div>
+        <div class="svc-big">Feral Cat<br><em>Control</em></div>
+      </div>
+    </div>
+    <div class="svc-copy reveal">
+      <div class="badge-row"><span class="badge-num">2</span><span class="badge-label">Feral Cat Control</span></div>
+      <h2>A serious threat to native fauna &mdash; and hard to manage without the right licensing.</h2>
+      <p>Feral cats are among the most damaging pest species in Australia, preying heavily on native birds, reptiles and small mammals, and carrying disease that can affect livestock. They're also notoriously difficult to control effectively.</p>
+      <p>Stateline provides licensed feral cat management for rural properties, large holdings and land under conservation management, conducted within the NSW legal framework.</p>
+      <div class="svc-facts">
+        <div class="svc-fact"><span>Protects</span><b>Native fauna, conservation areas, livestock health</b></div>
+        <div class="svc-fact"><span>Pressure</span><b>Predation of native species, disease risk to stock</b></div>
+        <div class="svc-fact"><span>Programs</span><b>Suited to rural holdings and managed conservation land</b></div>
+      </div>
+      <div class="svc-cta">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Discuss feral cat control</b><b>Discuss feral cat control</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SP-03 WILD DOG ============ -->
+<section class="svc-sec">
+  <div class="svc wrap px" id="wild-dog">
+    <div class="svc-panel reveal">
+      <img src="img/wild-dog.jpg" alt="Wild dog overlooking a sheep paddock from rocky high ground" loading="lazy"><div class="svc-shade" aria-hidden="true"></div>
+      <div class="svc-panel-inner">
+        <div class="svc-top"><span class="svc-code">SP&mdash;03</span><span class="svc-sci">Canis familiaris</span></div>
+        <div class="svc-big">Wild Dog<br><em>Control</em></div>
+      </div>
+    </div>
+    <div class="svc-copy reveal">
+      <div class="badge-row"><span class="badge-num">3</span><span class="badge-label">Wild Dog Control</span></div>
+      <h2>Stock losses that hit hard and fast &mdash; especially against timbered country.</h2>
+      <p>Wild dogs, dingoes and hybrids cause some of the most severe stock losses in NSW &mdash; killing and mauling sheep, goats and calves, often well beyond what's actually eaten. Properties bordering timbered hill country and reserves carry constant boundary pressure.</p>
+      <p>Stateline runs targeted wild dog programs for affected properties, built around where the pressure is coming from and where stock is most exposed.</p>
+      <div class="svc-facts">
+        <div class="svc-fact"><span>Protects</span><b>Sheep, goats, calves, working operations</b></div>
+        <div class="svc-fact"><span>Pressure</span><b>Attacks and mauling losses, boundary incursion from timbered country</b></div>
+        <div class="svc-fact"><span>Programs</span><b>Targeted response and ongoing pressure management</b></div>
+      </div>
+      <div class="svc-cta">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Discuss wild dog control</b><b>Discuss wild dog control</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SP-04 FERAL PIG ============ -->
+<section class="svc-sec">
+  <div class="svc flip wrap px" id="feral-pig">
+    <div class="svc-panel reveal">
+      <img src="img/feral-pig.jpg" alt="Feral pig moving through churned mud in timbered country" loading="lazy"><div class="svc-shade" aria-hidden="true"></div>
+      <div class="svc-panel-inner">
+        <div class="svc-top"><span class="svc-code">SP&mdash;04</span><span class="svc-sci">Sus scrofa</span></div>
+        <div class="svc-big">Feral Pig<br><em>Control</em></div>
+      </div>
+    </div>
+    <div class="svc-copy reveal">
+      <div class="badge-row"><span class="badge-num">4</span><span class="badge-label">Feral Pig Control</span></div>
+      <h2>Rooting, fouled water, wrecked fences &mdash; and a genuine biosecurity risk.</h2>
+      <p>Feral pigs tear up pasture and crops, foul dams and waterways, damage fencing, and prey on lambs. Beyond the visible damage, they're recognised as one of the most significant biosecurity risks on Australian farmland.</p>
+      <p>Stateline runs pig control programs across NSW farming and grazing country, from seasonal response to sustained programs on properties under ongoing pressure.</p>
+      <div class="svc-facts">
+        <div class="svc-fact"><span>Protects</span><b>Pasture, crops, waterways, fencing, lambs</b></div>
+        <div class="svc-fact"><span>Pressure</span><b>Rooting damage, wallows, crop losses, water fouling</b></div>
+        <div class="svc-fact"><span>Programs</span><b>Seasonal response or sustained control for high-pressure country</b></div>
+      </div>
+      <div class="svc-cta">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Discuss pig control</b><b>Discuss pig control</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SP-05 FERAL DEER ============ -->
+<section class="svc-sec">
+  <div class="svc wrap px" id="feral-deer">
+    <div class="svc-panel reveal">
+      <img src="img/feral-deer.jpg" alt="Feral deer stag standing in misty NSW forest" loading="lazy"><div class="svc-shade" aria-hidden="true"></div>
+      <div class="svc-panel-inner">
+        <div class="svc-top"><span class="svc-code">SP&mdash;05</span><span class="svc-sci">Cervidae spp.</span></div>
+        <div class="svc-big">Feral Deer<br><em>Control</em></div>
+      </div>
+    </div>
+    <div class="svc-copy reveal">
+      <div class="badge-row"><span class="badge-num">5</span><span class="badge-label">Feral Deer Control</span></div>
+      <h2>An expanding problem competing directly with your stock.</h2>
+      <p>Feral deer populations are expanding across NSW. They compete directly with livestock for pasture, damage fences and tree plantings, degrade waterways, and create real hazards on rural roads.</p>
+      <p>Stateline provides licensed deer control for properties dealing with grazing competition and property damage, with programs suited to both established populations and newly arriving pressure.</p>
+      <div class="svc-facts">
+        <div class="svc-fact"><span>Protects</span><b>Pasture, fencing, tree plantings, waterways</b></div>
+        <div class="svc-fact"><span>Pressure</span><b>Grazing competition, rubbing damage, expanding numbers</b></div>
+        <div class="svc-fact"><span>Programs</span><b>Established populations or early response to new arrivals</b></div>
+      </div>
+      <div class="svc-cta">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Discuss deer control</b><b>Discuss deer control</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVERY PROGRAM INCLUDES ============ -->
+<section class="every-sec">
+  <svg class="svc-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 700" aria-hidden="true" style="position:absolute;inset:0"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".5"><path d="M-100 600 C 260 520, 520 660, 820 570 S 1280 460, 1560 550"/><path d="M-100 650 C 280 570, 540 710, 840 620 S 1300 510, 1560 600"/><path d="M-100 80 C 240 20, 500 160, 800 70 S 1260 -30, 1560 50"/></g></svg>
+  <div class="every-inner wrap px">
+    <div class="every-head reveal">
+      <span class="every-eyebrow">The Standard</span>
+      <h2>Whatever the species, every Stateline program runs the same way.</h2>
+    </div>
+    <div class="every-grid reveal">
+      <div class="every"><span class="e-num">01</span><h3>Direct assessment</h3><p>Sam assesses your property personally &mdash; species pressure, terrain, and where the problem is coming from.</p></div>
+      <div class="every"><span class="e-num">02</span><h3>Licensed methods</h3><p>Every program runs within the relevant NSW legal framework. No grey areas, no risk passed on to you.</p></div>
+      <div class="every"><span class="e-num">03</span><h3>One operator</h3><p>The person you call is the person on your property. No subcontractors, no handovers, no lost detail.</p></div>
+      <div class="every"><span class="e-num">04</span><h3>Straight reporting</h3><p>You know what happened and what was achieved &mdash; communicated directly, without chasing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<div class="cta-sec">
+  <div class="cta-band reveal">
+    <svg class="svc-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 700" aria-hidden="true" style="position:absolute;inset:0"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".5"><path d="M-100 600 C 260 520, 520 660, 820 570 S 1280 460, 1560 550"/><path d="M-100 650 C 280 570, 540 710, 840 620 S 1300 510, 1560 600"/><path d="M-100 80 C 240 20, 500 160, 800 70 S 1260 -30, 1560 50"/><path d="M-100 130 C 260 70, 520 210, 820 120 S 1280 20, 1560 100"/></g></svg>
+    <div class="cta-inner">
+      <span class="cta-eyebrow">Direct Line</span>
+      <h2>Not sure which program you need?</h2>
+      <p>Call Sam and describe what you're seeing on your property. He'll give you a straight answer &mdash; and if Stateline isn't the right fit, he'll say so.</p>
+      <a href="tel:0477014447" class="cta-number">0477 014 447</a>
+      <span class="cta-label">Sam Cox &middot; Licensed Operator &middot; NSW Statewide</span>
+      <div class="cta-btns">
+        <a href="tel:0477014447" class="pillbtn pillbtn-gold">
+          <span class="roll"><i><b>Call Now</b><b>Call Now</b></i></span>
+          <span class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="contact.html" class="btn-ghost">Send an Enquiry</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="f-brand">
+      <img src="data:image/png;base64,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" alt="Stateline Contract Shooting">
+      <p>Licensed feral animal control across NSW. Fox, feral cat, wild dog, feral pig and feral deer &mdash; direct from Sam.</p>
+      <!-- Update hrefs when Instagram / Google Business Profile / Facebook links are live -->
+      <div class="f-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Google Business Profile"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v2.6h4.3c-.2 1.1-1.3 3.2-4.3 3.2-2.6 0-4.7-2.1-4.7-4.8S9.4 7.2 12 7.2c1.5 0 2.5.6 3 1.1l2.1-2C15.8 5.1 14.1 4.4 12 4.4 7.8 4.4 4.4 7.8 4.4 12s3.4 7.6 7.6 7.6c4.4 0 7.3-3.1 7.3-7.4 0-.5-.1-.9-.1-1.2H12z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.6-1.5H16.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#fox">Fox Control</a></li>
+        <li><a href="services.html#feral-cat">Feral Cat Control</a></li>
+        <li><a href="services.html#wild-dog">Wild Dog Control</a></li>
+        <li><a href="services.html#feral-pig">Feral Pig Control</a></li>
+        <li><a href="services.html#feral-deer">Feral Deer Control</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Sam</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:0477014447">Call Sam</a></li>
+      </ul>
+    </div>
+    <div class="f-col f-contact">
+      <h4>Contact</h4>
+      <a href="tel:0477014447" class="f-phone">0477 014 447</a>
+      <p class="f-note">Sam answers directly</p>
+      <a href="mailto:Sam.cox51@gmail.com" class="f-email">Sam.cox51@gmail.com</a>
+      <p class="f-area">Servicing all of NSW &mdash;<br>including remote and regional areas</p>
+      <p class="f-abn">ABN 50 997 544 847</p>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p>&copy; 2026 Stateline Contract Shooting. All rights reserved. | Built by <span class="f-latitude">Latitude Marketing</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Live clock — Sydney, HH:MM */
+  var clock = document.getElementById('clock');
+  var clockM = document.getElementById('clockMobile');
+  function tick(){
+    var t = new Intl.DateTimeFormat('en-AU',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Australia/Sydney'}).format(new Date());
+    if(clock) clock.textContent = t;
+    if(clockM) clockM.textContent = t;
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* Mobile sheet */
+  var layer = document.getElementById('sheetLayer');
+  function setSheet(open){
+    layer.classList.toggle('open', open);
+    layer.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  document.getElementById('menuOpen').addEventListener('click', function(){ setSheet(true); });
+  document.getElementById('menuClose').addEventListener('click', function(){ setSheet(false); });
+  document.getElementById('sheetBackdrop').addEventListener('click', function(){ setSheet(false); });
+  layer.querySelectorAll('.sheet-links a').forEach(function(a){ a.addEventListener('click', function(){ setSheet(false); }); });
+
+  /* Nav shadow on scroll */
+  var navwrap = document.getElementById('navwrap');
+  var onScroll = function(){ navwrap.classList.toggle('scrolled', window.scrollY > 24); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Scroll reveals */
+  var revealEls = document.querySelectorAll('.reveal');
+  if(reduced || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry, i){
+        if(entry.isIntersecting){
+          entry.target.style.transitionDelay = Math.min(i * 70, 280) + 'ms';
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}.nav-time,.sheet-time{display:none}</style></noscript>
+</body>
+</html>
