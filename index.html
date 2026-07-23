@@ -170,13 +170,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-dark);outline-
 .about-mobile{display:block}
 @media(min-width:1024px){.about-mobile{display:none}}
 .about-desktop{display:none}
-@media(min-width:1024px){.about-desktop{display:grid;grid-template-columns:26% 1fr 48%;align-items:stretch;gap:24px}}
+@media(min-width:1024px){.about-desktop{display:grid;grid-template-columns:minmax(320px,1fr) 25% 44%;align-items:stretch;gap:24px}}
 @media(min-width:1280px){.about-desktop{gap:32px}}
 .about-p{font-size:15px;line-height:1.6;font-weight:500;color:var(--olive);max-width:440px}
 @media(min-width:640px){.about-p{font-size:17px}}
-.about-desktop .about-p{font-size:16px;line-height:1.65;white-space:nowrap;max-width:none}
-@media(min-width:1280px){.about-desktop .about-p{font-size:18px}}
-.about-desktop .cell-c{align-self:stretch;display:flex;align-items:center;justify-content:flex-end}
+.about-desktop .about-p{font-size:16px;line-height:1.75;max-width:400px}
+@media(min-width:1280px){.about-desktop .about-p{font-size:17px}}
+.about-desktop .cell-c{order:1;align-self:center;display:flex;justify-content:flex-start}
 .about-btn{margin-top:24px}
 @media(min-width:1024px){.about-btn{margin-top:32px}}
 .about-imgs{margin-top:40px;display:flex;flex-direction:column;gap:16px}
@@ -187,9 +187,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-dark);outline-
 @media(min-width:640px){.about-imgs .slot-a{width:45%}}
 .slot-b{aspect-ratio:900/600}
 @media(min-width:640px){.about-imgs .slot-b{width:55%}}
-.about-desktop .slot-a{aspect-ratio:auto;height:100%;min-height:340px;width:100%}
-.about-desktop .slot-b{aspect-ratio:3/2;width:100%}
+.about-desktop .slot-a{order:2;aspect-ratio:auto;height:100%;min-height:340px;width:100%}
+.about-desktop .slot-b{order:3;aspect-ratio:3/2;width:100%}
 .img-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.img-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,29,19,.45) 0%,rgba(21,29,19,.1) 45%,rgba(21,29,19,.7) 100%)}
 .slot-contours{position:absolute;inset:0;opacity:.5}
 .slot-inner{position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
 .slot-tag{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4)}
@@ -461,7 +462,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
       <div class="about-imgs reveal">
         <!-- Swap panel content for approved photo: <img src="kangaroo.jpg" alt="..."> inside .img-slot -->
         <div class="img-slot slot-a">
-          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 440 350" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-20 280 C 90 240, 180 310, 280 270 S 420 210, 470 250"/><path d="M-20 310 C 100 270, 190 340, 290 300 S 430 240, 470 280"/><path d="M-20 60 C 90 30, 200 90, 300 50 S 430 0, 470 40"/></g></svg>
+          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 440 350" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-20 280 C 90 240, 180 310, 280 270 S 420 210, 470 250"/><path d="M-20 310 C 100 270, 190 340, 290 300 S 430 240, 470 280"/><path d="M-20 60 C 90 30, 200 90, 300 50 S 430 0, 470 40"/></g></svg><img src="about-1.jpg" alt="Stateline in the field — NSW property country" loading="lazy" onerror="this.nextElementSibling.remove();this.remove()"><div class="img-shade" aria-hidden="true"></div>
           <div class="slot-inner">
             <span class="slot-tag">Species Index</span>
             <div>
@@ -472,7 +473,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         </div>
         <!-- Swap panel content for approved photo: <img src="bush.jpg" alt="..."> inside .img-slot -->
         <div class="img-slot slot-b">
-          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 900 600" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-40 480 C 180 400, 380 520, 580 440 S 880 340, 960 420"/><path d="M-40 530 C 200 450, 400 570, 600 490 S 900 390, 960 470"/><path d="M-40 100 C 180 40, 400 140, 620 60 S 900 -20, 960 50"/></g></svg>
+          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 900 600" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-40 480 C 180 400, 380 520, 580 440 S 880 340, 960 420"/><path d="M-40 530 C 200 450, 400 570, 600 490 S 900 390, 960 470"/><path d="M-40 100 C 180 40, 400 140, 620 60 S 900 -20, 960 50"/></g></svg><img src="about-2.jpg" alt="Rolling NSW farmland at first light" loading="lazy" onerror="this.nextElementSibling.remove();this.remove()"><div class="img-shade" aria-hidden="true"></div>
           <div class="slot-inner">
             <span class="slot-tag">Coverage</span>
             <div class="slot-big">NSW.<br><em>Statewide.</em></div>
@@ -484,7 +485,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
     <!-- DESKTOP -->
     <div class="about-desktop px">
       <div class="img-slot slot-a">
-        <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 440 350" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-20 280 C 90 240, 180 310, 280 270 S 420 210, 470 250"/><path d="M-20 310 C 100 270, 190 340, 290 300 S 430 240, 470 280"/><path d="M-20 60 C 90 30, 200 90, 300 50 S 430 0, 470 40"/></g></svg>
+        <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 440 350" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-20 280 C 90 240, 180 310, 280 270 S 420 210, 470 250"/><path d="M-20 310 C 100 270, 190 340, 290 300 S 430 240, 470 280"/><path d="M-20 60 C 90 30, 200 90, 300 50 S 430 0, 470 40"/></g></svg><img src="about-1.jpg" alt="Stateline in the field — NSW property country" loading="lazy" onerror="this.nextElementSibling.remove();this.remove()"><div class="img-shade" aria-hidden="true"></div>
         <div class="slot-inner">
           <span class="slot-tag">Species Index</span>
           <div>
@@ -496,9 +497,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
       <div class="cell-c">
         <div>
           <p class="about-p">
-            Through licensed methods, proper planning<br>
-            and straight communication, Stateline helps<br>
-            NSW landholders take back their ground.
+            Through licensed methods, proper planning and straight communication, Stateline helps NSW landholders take back their ground.
           </p>
           <a href="about.html" class="pillbtn pillbtn-gold about-btn">
             <span class="roll"><i><b>About Sam Cox</b><b>About Sam Cox</b></i></span>
@@ -507,7 +506,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         </div>
       </div>
       <div class="img-slot slot-b">
-        <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 900 600" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-40 480 C 180 400, 380 520, 580 440 S 880 340, 960 420"/><path d="M-40 530 C 200 450, 400 570, 600 490 S 900 390, 960 470"/><path d="M-40 100 C 180 40, 400 140, 620 60 S 900 -20, 960 50"/></g></svg>
+        <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 900 600" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-40 480 C 180 400, 380 520, 580 440 S 880 340, 960 420"/><path d="M-40 530 C 200 450, 400 570, 600 490 S 900 390, 960 470"/><path d="M-40 100 C 180 40, 400 140, 620 60 S 900 -20, 960 50"/></g></svg><img src="about-2.jpg" alt="Rolling NSW farmland at first light" loading="lazy" onerror="this.nextElementSibling.remove();this.remove()"><div class="img-shade" aria-hidden="true"></div>
         <div class="slot-inner">
           <span class="slot-tag">Coverage</span>
           <div class="slot-big">NSW.<br><em>Statewide.</em></div>
