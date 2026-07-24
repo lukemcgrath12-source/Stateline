@@ -218,6 +218,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-dark);outline-
 .reg-code{grid-area:code;font-family:var(--mono);font-size:12px;color:var(--gold-dark);letter-spacing:.04em;white-space:nowrap}
 .reg-status{grid-area:status;justify-self:end;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--gold);background:var(--olive);padding:4px 10px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
 @media(min-width:960px){.reg-idx,.reg-name,.reg-code,.reg-status{grid-area:auto}}
+.reg-status.pending{background:transparent;border:1px solid var(--border-2);color:var(--text-faint)}
 .register-note{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-top:20px;letter-spacing:.03em;line-height:1.9}
 
 /* ============ SPECIES CARDS ============ */
@@ -250,6 +251,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-dark);outline-
 .card-pill span{font-size:13px;font-weight:500;color:var(--olive);opacity:0;transition:opacity .3s ease-in-out .1s}
 .sp-card:hover .card-pill span{opacity:1}
 .sp-desc{font-size:13px;color:var(--text-light);margin-top:16px;line-height:1.6}
+.sp-top-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.sp-pending{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px 9px;white-space:nowrap}
 @media(min-width:640px){.sp-desc{font-size:14px}}
 .sp-title{font-size:14px;font-weight:600;color:var(--olive);margin-top:4px}
 @media(min-width:640px){.sp-title{font-size:15px}}
@@ -430,7 +433,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
 <div class="ledger" role="region" aria-label="Key facts">
   <div class="ledger-inner wrap px">
     <div class="ledger-cell"><span class="ledger-num">5</span><span class="ledger-label">Years in the field</span></div>
-    <div class="ledger-cell"><span class="ledger-num">5</span><span class="ledger-label">Species controlled</span></div>
+    <div class="ledger-cell"><span class="ledger-num">7</span><span class="ledger-label">Species controlled</span></div>
     <div class="ledger-cell"><span class="ledger-num">6</span><span class="ledger-label">Held accreditations</span></div>
     <div class="ledger-cell"><span class="ledger-num">1</span><span class="ledger-label">Operator &mdash; always Sam</span></div>
   </div>
@@ -466,8 +469,8 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
           <div class="slot-inner">
             <span class="slot-tag">Species Index</span>
             <div>
-              <div class="slot-big">Five species.<br><em>One operator.</em></div>
-              <div class="slot-codes" style="margin-top:14px"><span>FX</span><span>FC</span><span>WD</span><span>FP</span><span>FD</span></div>
+              <div class="slot-big">Seven species.<br><em>One operator.</em></div>
+              <div class="slot-codes" style="margin-top:14px"><span>FX</span><span>FC</span><span>WD</span><span>FP</span><span>FD</span><span>KG</span><span>RH</span></div>
             </div>
           </div>
         </div>
@@ -489,8 +492,8 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         <div class="slot-inner">
           <span class="slot-tag">Species Index</span>
           <div>
-            <div class="slot-big">Five species.<br><em>One operator.</em></div>
-            <div class="slot-codes" style="margin-top:14px"><span>FX</span><span>FC</span><span>WD</span><span>FP</span><span>FD</span></div>
+            <div class="slot-big">Seven species.<br><em>One operator.</em></div>
+            <div class="slot-codes" style="margin-top:14px"><span>FX</span><span>FC</span><span>WD</span><span>FP</span><span>FD</span><span>KG</span><span>RH</span></div>
           </div>
         </div>
       </div>
@@ -541,8 +544,10 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         <div class="reg-row"><span class="reg-idx">04</span><span class="reg-name">NSW Firearms Licence &mdash; Category A and B</span><span class="reg-code">CAT A / B</span><span class="reg-status">Held</span></div>
         <div class="reg-row"><span class="reg-idx">05</span><span class="reg-name">Provide Cardiopulmonary Resuscitation</span><span class="reg-code">HLTAID009</span><span class="reg-status">Held</span></div>
         <div class="reg-row"><span class="reg-idx">06</span><span class="reg-name">Provide First Aid</span><span class="reg-code">UETDRMP010</span><span class="reg-status">Held</span></div>
+        <div class="reg-row"><span class="reg-idx">07</span><span class="reg-name">NSW Occupier's Licence &mdash; Kangaroo Population Management</span><span class="reg-code">TBC</span><span class="reg-status pending">Pending</span></div>
       </div>
       <p class="register-note">// All programs conducted within the relevant NSW legal framework. Documentation available on request.</p>
+      <p class="register-note">// Kangaroo management licence application in progress &mdash; code will be added once issued.</p>
     </div>
   </div>
 </section>
@@ -617,6 +622,30 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         </div>
         <p class="sp-desc">Controlling expanding deer populations causing grazing competition, property damage and biosecurity risk.</p>
         <h3 class="sp-title">Feral Deer Control</h3>
+      </a>
+      <a href="services.html#kangaroo" class="sp-card reveal">
+        <div class="sp-panel">
+          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 660 500" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-30 400 C 140 340, 300 440, 460 370 S 660 290, 700 350"/><path d="M-30 440 C 150 380, 310 480, 470 410 S 670 330, 700 390"/><path d="M-30 90 C 140 40, 310 120, 470 60 S 670 -10, 700 40"/></g></svg>
+          <div class="sp-panel-inner">
+            <div class="sp-top"><span class="sp-code">SP&mdash;06</span><span class="sp-top-right"><span class="sp-sci">Macropus spp.</span><span class="sp-pending">Licence pending</span></span></div>
+            <div class="sp-big">Kangaroo<br>Management</div>
+          </div>
+          <div class="card-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg><span>View service</span></div>
+        </div>
+        <p class="sp-desc">Regulated population management for grazing pressure on pasture reserved for stock &mdash; operating under the NSW Kangaroo Management Program.</p>
+        <h3 class="sp-title">Kangaroo Management</h3>
+      </a>
+      <a href="services.html#rabbit-hare" class="sp-card reveal">
+        <div class="sp-panel">
+          <svg class="slot-contours" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 660 500" aria-hidden="true"><g fill="none" stroke="#4A5D3A" stroke-width="1" opacity=".6"><path d="M-30 380 C 150 320, 320 420, 480 350 S 660 280, 700 330"/><path d="M-30 420 C 160 360, 330 460, 490 390 S 670 320, 700 370"/><path d="M-30 110 C 150 60, 320 140, 480 80 S 670 10, 700 60"/></g></svg>
+          <div class="sp-panel-inner">
+            <div class="sp-top"><span class="sp-code">SP&mdash;07</span><span class="sp-sci">O. cuniculus / L. europaeus</span></div>
+            <div class="sp-big">Rabbit &amp; Hare<br>Control</div>
+          </div>
+          <div class="card-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg><span>View service</span></div>
+        </div>
+        <p class="sp-desc">Warren damage, erosion and grazing competition &mdash; controlled statewide, often alongside fox programs on the same ground.</p>
+        <h3 class="sp-title">Rabbit &amp; Hare Control</h3>
       </a>
       <div class="cta-card reveal">
         <h3>Not sure what you're dealing with?</h3>
@@ -717,6 +746,8 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
         <li><a href="services.html#wild-dog">Wild Dog Control</a></li>
         <li><a href="services.html#feral-pig">Feral Pig Control</a></li>
         <li><a href="services.html#feral-deer">Feral Deer Control</a></li>
+        <li><a href="services.html#kangaroo">Kangaroo Management</a></li>
+        <li><a href="services.html#rabbit-hare">Rabbit &amp; Hare Control</a></li>
       </ul>
     </div>
     <div class="f-col">
