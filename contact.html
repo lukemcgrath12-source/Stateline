@@ -202,8 +202,8 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
 .footer-bar p{font-size:13px;color:rgba(255,255,255,.5)}
 .footer-bar .f-latitude{color:var(--gold);text-decoration:none;transition:opacity .3s}
 .footer-bar .f-latitude:hover{opacity:.72}
-.footer-bar p a:not(.f-latitude){color:rgba(255,255,255,.7);text-decoration:none}
-.footer-bar p a:not(.f-latitude):hover{color:var(--gold)}
+.footer-bar .f-legal{color:rgba(255,255,255,.5);text-decoration:none;transition:color .25s}
+.footer-bar .f-legal:hover{color:var(--gold)}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -301,11 +301,8 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
       <h2>Prefer to write it down?</h2>
       <p class="form-intro">Tell Sam what you're seeing on your property and where you are. Include your phone number &mdash; he'll call you back to talk it through.</p>
 
-      <!-- Form: FormSubmit AJAX, routed to Latitude Marketing (info@latitudemarketing.au) until Sam's inbox is set up -->
-      <form id="enquiryForm" action="https://formsubmit.co/ajax/info@latitudemarketing.au" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New enquiry: statelinecontractshooting.com.au">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      <!-- FORMSPREE_ID: replace with the live Formspree form ID before launch -->
+      <form id="enquiryForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST" novalidate>
         <div class="f-grid">
           <div class="f-field">
             <label for="fName">Name <em>*</em></label>
@@ -406,7 +403,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
     </div>
   </div>
   <div class="footer-bar">
-    <p>&copy; 2026 Stateline Contract Shooting. All rights reserved. | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | Built by <a href="https://www.latitudemarketing.au/?utm_source=stateline&utm_medium=referral&utm_campaign=client_credit" target="_blank" rel="noopener" class="f-latitude">Latitude Marketing</a></p>
+    <p>&copy; 2026 Stateline Contract Shooting. All rights reserved. | <a href="terms.html" class="f-legal">Terms and Conditions</a> | <a href="privacy.html" class="f-legal">Privacy Policy</a> | Built by <a href="https://www.latitudemarketing.au/?utm_source=stateline&utm_medium=referral&utm_campaign=client_credit" target="_blank" rel="noopener" class="f-latitude">Latitude Marketing</a></p>
   </div>
 </footer>
 
@@ -454,11 +451,11 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
     revealEls.forEach(function(el){ io.observe(el); });
   }
 
-  /* FormSubmit AJAX submit */
+  /* Formspree AJAX submit */
   var form = document.getElementById('enquiryForm');
   var status = document.getElementById('formStatus');
   var btn = document.getElementById('submitBtn');
-  if(form) form.addEventListener('submit', function(e){
+  form.addEventListener('submit', function(e){
     e.preventDefault();
     status.className = 'f-status';
     status.textContent = '';
@@ -472,10 +469,7 @@ footer{background:var(--olive-deep);color:var(--white);padding:72px 20px 0}
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     }).then(function(res){
-      if(!res.ok) throw new Error('Form error');
-      return res.json();
-    }).then(function(d){
-      if(d && (d.success === true || d.success === 'true')){
+      if(res.ok){
         form.reset();
         status.className = 'f-status ok';
         status.innerHTML = '<b>Enquiry sent.</b> Sam will call you back on the number you provided. If it\'s urgent, call 0477 014 447 directly.';
